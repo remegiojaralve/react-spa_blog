@@ -1,0 +1,14 @@
+body {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  font-smoothing: $font-smoothing;
+  text-rendering: $text-rendering;
+  -webkit-font-smoothing: $font-smoothing;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  color: $base-font-color;
+  background-color: $base-background-color;
+  min-width: 1180px;
+}
+

@@ -1,0 +1,29 @@
+@import '../../assets/style/setting';
+
+.breadcrumbs {
+  padding: 28px 0;
+  background-color: $wild-sand;
+  margin-bottom: 117px;
+}
+
+.breadcrumbs__item {
+  font-size: 16px;
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+
+  a {
+    color: $base-font-color;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+
+  &:first-child {
+    &:after {
+      content: ">";
+      padding: 0 14px;
+    }
+  }
+}

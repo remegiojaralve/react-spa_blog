@@ -1,0 +1,59 @@
+@import '../../assets/style/setting';
+
+.scroll-to-top__wrapper {
+  position: fixed;
+  margin: 0 auto;
+  left: 50%;
+  transform: translate(-50%);
+  width: 1120px;
+  bottom: 89px;
+  align-items: center;
+  height: 20px;
+  justify-content: flex-end;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  pointer-events: none;
+
+  &:hover{
+    opacity: .9;
+  }
+}
+
+.scroll-to-top {
+  font-family: $font-montserrat;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: white;
+  position: relative;
+  padding-bottom: 8px;
+  pointer-events: auto;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 14px;
+    width: 12px;
+    height: 12px;
+    border-top: solid 3px currentColor;
+    border-right: solid 3px currentColor;
+    transform: rotate(-45deg) translateX(-83%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

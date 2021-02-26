@@ -1,0 +1,149 @@
+@import '../../assets/style/setting';
+
+.mv {
+  width: 100%;
+  height: 666px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mv__slider-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  height: 100%;
+
+  .l-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.mv__slides {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  height: 100%;
+}
+
+.mv__image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mv__prev,
+.mv__next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 48px;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  outline: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 18px;
+    height: 18px;
+    border-top: solid 5px $mine-shaft-black;
+    border-right: solid 5px $mine-shaft-black;
+    transform: rotate(-135deg);
+    transition: border-color $duration $cubic-bezier;
+  }
+
+  &.mv__next--next {
+    left: auto;
+    right: 48px;
+    border-radius: 3px 0 0 3px;
+
+    &:before {
+      transform: rotate(45deg);
+    }
+  }
+
+  &:hover {
+    &:before {
+      border-color: $white;
+    }
+  }
+}
+
+.mv__slider-text-wrapper {
+  max-width: 566px;
+  width: 100%;
+  margin-left: auto;
+  text-align: right;
+  margin-right: 16px;
+}
+
+.mv__slider-title {
+  color: red;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.5;
+  box-decoration-break: clone;
+  color: #fff;
+  background-color: #000;
+  display: inline;
+  padding: 8px 0;
+  box-shadow: 18px 0px 0 0 #000, -10px 0px 0 0 #000;
+  word-break: break-word;
+}
+
+.mv__slider-time {
+  display: block;
+  font-family: $font-montserrat;
+  font-size: 28px;
+  font-weight: 400;
+  margin-top: 18px;
+  letter-spacing: 0.2em;
+  margin-right: -25px;
+}
+
+.mv__dots-wrapper {
+  position: absolute;
+  bottom: 47px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mv__slider-dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #fff;
+  opacity: .5;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+
+  &.is-active,
+  &:hover {
+    background-color: #101010;
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+

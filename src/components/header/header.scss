@@ -1,0 +1,17 @@
+@import '../../assets/style/setting';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.header__button {
+  font-family: $font-montserrat;
+  font-size: 18px;
+  font-weight: 900;
+  button {
+    outline: none;
+  }
+}

@@ -1,0 +1,66 @@
+@import '../../assets/style/setting';
+
+.comment {
+  margin: 60px 0;
+}
+
+.comment__title {
+  font-family: $font-montserrat;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  padding-bottom: 32px;
+}
+
+.comment__message {
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  line-height: 2.3;
+  padding: 50px 40px 47px;
+  margin: 50px 0;
+  margin-bottom: 50px;
+  background-color: $wild-sand;
+
+  p {
+    font-weight: 500;
+  }
+
+  span {
+    font-family: $font-montserrat;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-top: 12px; font-weight: bold;
+  }
+}
+
+.comment__textarea {
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  line-height: 2.3;
+  width: 100%;
+  resize: none;
+  border: 1px solid black;
+  margin: 20px 0 40px;
+  height: 200px;
+  padding: 42px 38px;
+  outline: none;
+
+  &::placeholder {
+    font-family: $font-montserrat;
+    font-size: 19px;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    opacity: .5;
+  }
+}
+
+.comment__button {
+  width: 210px;
+  height: 70px;
+  margin-left: auto;
+}
+
+
+
+
